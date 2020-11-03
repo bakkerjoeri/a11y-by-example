@@ -1,0 +1,15 @@
+{
+  "name": "a11y-examples",
+  "version": "1.0.0",
+  "description": "Examples of how to make components accessible",
+  "scripts": {
+    "dev": "npx xm dev --root ./src",
+    "build": "npx xm build --root ./src --output ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "accessibility"
+  ],
+  "author": "Joeri Bakker <bakkerjoeri@gmail.com>"
+}

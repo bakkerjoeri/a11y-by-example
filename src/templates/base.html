@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>a11y</title>
+    </head>
+    <body class="Page">
+        <slot name="body"></slot>
+
+        <style>
+            html {
+                font-family: 'Charter';
+            }
+        
+            body {
+                margin: 0 auto;
+                width: 600px;
+            }
+            
+            details,
+            summary {
+                margin-bottom: 1em;
+            }
+
+            a {
+                color: navy;
+            }
+        
+            .visually-hidden {
+                position: absolute;
+                overflow: hidden;
+                clip: rect(0 0 0 0);
+                height: 1px; width: 1px;
+                margin: -1px; padding: 0; border: 0;
+            }
+        </style>
+    </body>
+</html>

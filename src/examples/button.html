@@ -1,0 +1,50 @@
+<import src="/templates/example.html">
+    <fill name="title">
+        The button
+    </fill>
+
+    <fill name="bad">
+        <import src="/components/bad-button.html">
+            ☰
+        </import>
+    </fill>
+
+    <fill name="problems">
+        <markdown>
+            * The element is an `<a>`, but should be a `<button>`.
+            * There are no `:focus` styles.
+            * There is no text describing the button.
+        </markdown>
+    </fill>
+
+    <fill name="good">
+        <import src="/components/good-button.html">
+            ☰ Menu
+        </import>
+    </fill>
+
+    <fill name="improvements">
+        <ul>
+            <li>Use <code>&lt;button&gt;</code>.</li>
+            <li>Use <code>:focus</code> selector as well as <code>:hover</code>.</li>
+            <li>Add a label:</li>
+            <ul>
+                <li>adding text to the button;</li>
+                <li>using the <code>aria-label</code> attribute;</li>
+                <li>using visually hidden text:
+                    <div>
+                        <pre>
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+}
+                        </pre>
+                    </div>
+                </li>
+            </ul>
+        </ul>
+    </fill>
+</import>

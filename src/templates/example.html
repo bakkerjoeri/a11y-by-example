@@ -1,0 +1,44 @@
+<import src="/templates/base.html">
+    <fill name="title">
+        <slot name="title"></slot>
+    </fill>
+    
+    <fill name="body">
+        <p><a href="/">Go back home</a></p>
+
+        <h1>
+            <slot name="title"></slot>
+        </h1>
+
+        <h2>The bad</h2>
+        <div class="Example">
+            <slot name="bad"></slot>
+        </div>
+
+        <details>
+            <summary>What's wrong with this?</summary>
+            <slot name="problems"></slot>
+        </details>
+
+        <h2>The good</h2>
+        <details>
+            <summary>Show solution</summary>
+            <div class="Example">
+                <slot name="good"></slot>
+            </div>
+
+            <h3>Improvements</h3>
+            <slot name="improvements"></slot>
+        </details>
+    </fill>
+</import>
+
+<style>
+    .Example {
+        padding: 20px;
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: center;
+        border: 2px dashed gray;
+    }
+</style>
