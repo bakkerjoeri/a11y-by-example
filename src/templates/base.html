@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>a11y</title>
     </head>
     <body class="Page">
         <slot name="body"></slot>
-
-        <style>
-            html {
-                font-family: 'Charter';
-            }
-        
-            body {
-                margin: 0 auto;
-                width: 600px;
-            }
-            
-            details,
-            summary {
-                margin-bottom: 1em;
-            }
-
-            a {
-                color: navy;
-            }
-        
-            .visually-hidden {
-                position: absolute;
-                overflow: hidden;
-                clip: rect(0 0 0 0);
-                height: 1px; width: 1px;
-                margin: -1px; padding: 0; border: 0;
-            }
-        </style>
     </body>
 </html>
+
+<style>
+    html {
+        font-family: 'Charter';
+    }
+
+    body {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0 20px;
+    }
+    
+    details,
+    summary {
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: navy;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px; width: 1px;
+        margin: -1px; padding: 0; border: 0;
+    }
+</style>

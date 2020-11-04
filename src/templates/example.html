@@ -12,7 +12,10 @@
 
         <h2>The bad</h2>
         <div class="Example">
-            <slot name="bad"></slot>
+            <div class="Example__live">
+                <slot name="bad"></slot>
+            </div>
+            <textarea class="Example__code" rows="15"><slot name="bad"></slot></textarea>
         </div>
 
         <details>
@@ -24,7 +27,10 @@
         <details>
             <summary>Show solution</summary>
             <div class="Example">
-                <slot name="good"></slot>
+                <div class="Example__live">
+                    <slot name="good"></slot>
+                </div>
+                <textarea class="Example__code" rows="15"><slot name="good"></slot></textarea>
             </div>
 
             <h3>Improvements</h3>
@@ -35,10 +41,22 @@
 
 <style>
     .Example {
-        padding: 20px;
+        width: 100%;
+        /* min-height: 200px; */
         margin-bottom: 1em;
+    }
+    
+    .Example__live {
+        margin-bottom: 20px;
+        padding: 20px;
         display: flex;
         justify-content: center;
+        align-items: center;
         border: 2px dashed gray;
+    }
+
+    .Example__code {
+        width: 100%;
+        border: none;
     }
 </style>
