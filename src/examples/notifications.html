@@ -1,0 +1,22 @@
+<import src="/templates/example.html">
+    <fill name="title">
+        Notifications
+    </fill>
+
+    <fill name="bad"><import src="/components/notifications-bad.html">5</import></fill>
+
+    <fill name="problems">
+        <markdown>
+            * Voice Over reads this as "Bell 5".
+        </markdown>
+    </fill>
+
+    <fill name="good"><import src="/components/notifications-good.html">5</import></fill>
+
+    <fill name="improvements">
+        <markdown>
+            * Use `aria-label` to describe the button.
+            * Use `aria-description` for context, like the amount of notifications.
+        </markdown>
+    </fill>
+</import>

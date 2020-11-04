@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>a11y</title>
+        <title>Accessibility by example</title>
     </head>
     <body class="Page">
         <slot name="body"></slot>
@@ -11,16 +11,21 @@
 </html>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     html {
         font-family: 'Charter';
+        font-size: 16px;
     }
 
     body {
         margin: 0 auto;
-        max-width: 600px;
-        padding: 0 20px;
+        max-width: 640px;
+        padding: 0 20px 40px;
     }
-    
+
     details,
     summary {
         margin-bottom: 1em;
@@ -28,6 +33,22 @@
 
     a {
         color: navy;
+    }
+
+    code {
+        white-space: nowrap;
+        font-size: 15px;
+        background-color: rgba(220,220,220,.5);
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+
+    button {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: transparent;
+        border: none;
     }
 
     .visually-hidden {

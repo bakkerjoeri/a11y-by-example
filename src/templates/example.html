@@ -15,7 +15,13 @@
             <div class="Example__live">
                 <slot name="bad"></slot>
             </div>
-            <textarea class="Example__code" rows="15"><slot name="bad"></slot></textarea>
+            <h3>
+                <label for="bad">
+                    Source code
+                </label>
+            </h3>
+
+            <textarea id="bad" readonly class="Example__code" rows="15"><slot name="bad"></slot></textarea>
         </div>
 
         <details>
@@ -30,7 +36,13 @@
                 <div class="Example__live">
                     <slot name="good"></slot>
                 </div>
-                <textarea class="Example__code" rows="15"><slot name="good"></slot></textarea>
+
+                <h3>
+                    <label for="good">
+                        Source code
+                    </label>
+                </h3>
+                <textarea id="good" readonly class="Example__code" rows="15"><slot name="good"></slot></textarea>
             </div>
 
             <h3>Improvements</h3>
@@ -42,7 +54,6 @@
 <style>
     .Example {
         width: 100%;
-        /* min-height: 200px; */
         margin-bottom: 1em;
     }
     
@@ -50,6 +61,7 @@
         margin-bottom: 20px;
         padding: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 2px dashed gray;
@@ -57,6 +69,11 @@
 
     .Example__code {
         width: 100%;
+        overflow: visible;
+        padding: 1em;
+        font-size: 14px;
+        color: white;
+        background-color: #3f3f3f;
         border: none;
     }
 </style>

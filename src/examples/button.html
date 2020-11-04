@@ -3,29 +3,30 @@
         The button
     </fill>
 
-    <fill name="bad"><import src="/components/bad-button.html">☰</import></fill>
+    <fill name="bad"><import src="/components/button-bad.html">❌</import></fill>
 
     <fill name="problems">
         <markdown>
             * The element is an `<a>`, but should be a `<button>`.
             * There are no `:focus` styles.
-            * There is no text describing the button.
+            * Voice Over reads this as "cross mark".
+            * There is no text describing what the button does.
         </markdown>
     </fill>
 
-    <fill name="good"><import src="/components/good-button.html">☰ Menu</import></fill>
+    <fill name="good"><import src="/components/button-good.html"><span aria-hidden="true">❌</span> close</import></fill>
 
     <fill name="improvements">
         <ul>
-            <li>Use <code>&lt;button&gt;</code>.</li>
+            <li>Use <code>&lt;button&gt;</code> to indicate interactivity.</li>
             <li>Use <code>:focus</code> selector as well as <code>:hover</code>.</li>
-            <li>Add a label:</li>
-            <ul>
-                <li>adding text to the button;</li>
-                <li>using the <code>aria-label</code> attribute;</li>
-                <li>using visually hidden text:
-                    <div>
-                        <pre>
+            <li>Label the button by doing one of the following:
+                <ul>
+                    <li>Add text to the button.</li>
+                    <li>Use the <code>aria-label</code> attribute.</li>
+                    <li>Use visually hidden text:
+                        <div>
+                            <pre>
 .visually-hidden {
     position: absolute;
     overflow: hidden;
@@ -33,10 +34,17 @@
     height: 1px; width: 1px;
     margin: -1px; padding: 0; border: 0;
 }
-                        </pre>
-                    </div>
-                </li>
-            </ul>
+                            </pre>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>Stop Voice Over from reading the icon:
+                <ul>
+                    <li>If the icon is text or emoji, use a <code>&lt;span&gt;</code> with <code>aria-hidden="true"</code>.</li>
+                    <li>If the icon is an image, use <code>role="presentation"</code>.</li>
+                </ul>
+            </li>
         </ul>
     </fill>
 </import>
