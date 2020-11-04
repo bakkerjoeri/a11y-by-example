@@ -1,0 +1,85 @@
+<import src="/templates/example.html">
+    <fill name="title">
+        Input
+    </fill>
+
+    <fill name="bad">
+<form class="BadInput">
+    <input class="BadInput__input" type="email" placeholder="Email address" />
+
+    <p class="BadInput__hint">
+        Needed for notifications.
+    </p>
+</form>
+
+<style>
+    .BadInput {
+        width: 100%;
+    }
+
+    .BadInput__input {
+        font-size: 16px;
+        padding: 2px 4px;
+    }
+
+    .BadInput__hint {
+        font-size: 12px;
+        opacity: 0.5;
+    }
+</style>
+    </fill>
+
+    <fill name="problems">
+        <markdown>
+            * Once the field has content, its label is lost.
+            * In fact, there is no functional `<label>`. Placeholders shouldn't be used as stand-ins for labels.
+            * The hint is not connected to the form field and will be noticed too late when using Voice Over.
+            * The hint and placeholder color contrast is too low.
+        </markdown>
+    </fill>
+
+    <fill name="good">
+<form class="GoodInput">
+    <label for="email" class="GoodInput__label">
+        Email address
+    </label>
+
+    <input class="GoodInput__input" id="email" type="email" aria-describedby="email-hint"/>
+
+    <p class="GoodInput__hint" id="email-hint">
+        Needed for notifications.
+    </p>
+</form>
+
+<style>
+    .GoodInput {
+        width: 100%;
+    }
+
+    .GoodInput__label {
+        display: block;
+        line-height: 1.45em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+
+    .GoodInput__input {
+        font-size: 16px;
+        padding: 2px 4px;
+    }
+
+    .GoodInput__hint {
+        font-size: 12px;
+    }
+</style>
+    </fill>
+
+    <fill name="improvements">
+        <markdown>
+            * Use a `<label>` to describe the input.
+            * Remove the placeholder.
+            * Use `aria-details` or `aria-describedby` to connect the hint.
+            * Use a darker color for the hint.
+        </markdown>
+    </fill>
+</import>

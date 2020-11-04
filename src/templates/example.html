@@ -4,7 +4,9 @@
     </fill>
     
     <fill name="body">
-        <p><a href="/">Go back home</a></p>
+        <nav class="Page__navigation">
+            <a href="/">☜ Go back home</a>
+        </nav>
 
         <h1>
             <slot name="title"></slot>
@@ -52,6 +54,10 @@
 </import>
 
 <style>
+    .Page__navigation {
+        margin-top: 20px;
+    }
+
     .Example {
         width: 100%;
         margin-bottom: 1em;
